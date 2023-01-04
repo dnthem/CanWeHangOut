@@ -29,20 +29,38 @@
     </div>
 
     <script>
+        const img = [
+            'https://media1.giphy.com/media/M9C8PHLkh0hQxraaLG/giphy.gif?cid=790b7611f6852ff53999980c11add19df5ed6568f4312720&rid=giphy.gif&ct=g',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBdSuNWY1KZsMuBlFcDvO3Nm5j_nfaOJd8g&usqp=CAU',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPcu7K9YD_WiDBe5UV4OlkNyusTbPebNI3Pw&usqp=CAU',
+
+        ]
+        let count = -1;
         document.querySelector('button').addEventListener('click', () => {
             alert('Thank you ><')
             document.querySelector('h1').innerHTML='🤗🤗🤗Thank you 🤗🤗🤗'
+
             document.querySelector('img').src='https://i.imgflip.com/cnudu.jpg'
         })
         const input = document.querySelector('input');
-        input.addEventListener('mouseover', move)
+        
         input.addEventListener('click', move)
         function move(e) {
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-            input.style.setProperty('position', 'fixed')
-            input.style.setProperty('left', `${Math.floor(Math.random() * w)}px`)
-            input.style.setProperty('top',` ${Math.floor(Math.random() * h)}px`)
+            
+
+            count = count === (img.length - 1)? count: ++count;
+            if (count === 1)
+                document.querySelector('h1').innerHTML="I won't take no for an answer"
+            if (count === 2)
+                document.querySelector('h1').innerHTML="Yes, please :)"
+            if (count === img.length - 1) {
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                input.style.setProperty('position', 'fixed')
+                input.style.setProperty('left', `${Math.floor(Math.random() * w)}px`)
+                input.style.setProperty('top',` ${Math.floor(Math.random() * h)}px`)
+            }
+            document.querySelector('img').src=img[count]
         }
     </script>
 
