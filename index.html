@@ -55,6 +55,7 @@
             else if (count === 1)
                 document.querySelector('h1').innerHTML="Yes, please :)"
             else {
+                input.addEventListener('mouseover', move)
                 var w = window.innerWidth;
                 var h = window.innerHeight;
                 input.style.setProperty('position', 'fixed')
