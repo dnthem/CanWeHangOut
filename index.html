@@ -52,7 +52,7 @@
             count = count === (img.length - 1)? count: ++count;
             if (count === 1)
                 document.querySelector('h1').innerHTML="I won't take no for an answer"
-            if (count === 2)
+            else if (count === 2)
                 document.querySelector('h1').innerHTML="Yes, please :)"
             else {
                 var w = window.innerWidth;
