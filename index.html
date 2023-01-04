@@ -30,6 +30,7 @@
 
     <script>
         const img = [
+            'https://media2.giphy.com/media/dBZnwwejzgf92kl7tD/giphy.gif?cid=ecf05e47612fylaei2j0v2j8qw9rdqhisvd6s52bkkfifb00&rid=giphy.gif&ct=g',
             'https://media1.giphy.com/media/M9C8PHLkh0hQxraaLG/giphy.gif?cid=790b7611f6852ff53999980c11add19df5ed6568f4312720&rid=giphy.gif&ct=g',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBdSuNWY1KZsMuBlFcDvO3Nm5j_nfaOJd8g&usqp=CAU',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPcu7K9YD_WiDBe5UV4OlkNyusTbPebNI3Pw&usqp=CAU',
@@ -53,7 +54,7 @@
                 document.querySelector('h1').innerHTML="I won't take no for an answer"
             if (count === 2)
                 document.querySelector('h1').innerHTML="Yes, please :)"
-            if (count === img.length - 1) {
+            else {
                 var w = window.innerWidth;
                 var h = window.innerHeight;
                 input.style.setProperty('position', 'fixed')
